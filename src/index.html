@@ -26,7 +26,15 @@
     </ol>
 </div>
 <script>
-    alert('Witamy witamy');
+    // szukanie po identyfikatorze
+const header = document.getElementById('main-header');
+alert(header.innerText);
+// szukanie po selektorach (tak jak w CSS)
+const nudy = document.querySelectorAll("#app .boring");
+nudy.forEach(element => {
+    alert(`Nuda: ${element.innerText}`);
+    element.classList.remove('boring');
+});
 </script>
 </body>
 </html>
